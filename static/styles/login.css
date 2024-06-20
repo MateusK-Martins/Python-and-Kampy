@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+html, #fund,body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+:root{
+    --b1:rgb(37, 37, 37);
+    --ch1: rgb(0, 0, 0);
+    --txt1: rgb(0, 0, 0);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: black url(imgs/pexels-bri-schneiter-28802-346529.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: -1%;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(7px);
+    z-index: -1;
+}
+
+main{
+    height: 550px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 20px;
+
+    background-color: rgba(197, 255, 251, 0.523);
+
+}
+
+main>section>h1{
+    font-size: 2em;
+    margin: 50px;
+    color: var(--txt1);
+}
+main>section>h2{
+    font-size: 1.5em;
+    margin: 0 10px 20px 10px;
+    color: var(--txt1);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--txt1);
+    font-weight: bolder;
+}
+
+form>section>input{
+    height: 50px;
+    width:250px;
+
+    background-color: rgb(121, 149, 172);
+
+    margin: 20px 0;
+
+    border-radius: 10px;
+}
+#submit{
+    height: 40px;
+    width: 150px;
+
+    cursor: pointer;
+
+    margin: 10px 0;
+
+    background-color: rgb(26, 249, 156);
+
+    border-radius: 5px;
+}
+
+form>section>input:hover{
+    transform: scale(1.1);
+    background-color: aliceblue;
+    transition: .5s;
+}
+
+#submit:hover{
+    transform: scale(1.1);
+    background-color: aliceblue;
+    transition: .5s;
+}
+
+form>a{
+    font-size: 1em;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+form>a:hover{
+    font-size: 1.5em;
+    color: rgb(162, 255, 56);
+    transition: .5s;
+}

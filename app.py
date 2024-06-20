@@ -1,15 +1,14 @@
-from kampy.csv import kampy
+from flask import Flask, render_template
 
-cut = ['\r', '\t', '\n']
-kampy.settings(cut)
+app = Flask(__name__)
 
-arq = kampy.cinl('kap.csv')
-arq = kampy.clean(arq)
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-kampy.clear()
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
 
-arq = kampy.get_column(arq,2)
-
-kampy.printli(arq, 'column')
-
-#ATENÇÃo Nomes e informações do arquivo csv foram gerados aleatóriamente
+if __name__ == '__main__':
+    app.run(debug=True)

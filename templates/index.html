@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+    <title>Kapystem!</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>
+                Bem vindo ao Kapystem!
+            </h1>
+
+            <h2>
+                Faça seu Login:
+            </h2>
+        </section>
+        <section>
+            <form action="#" method="post">
+                <section>
+                    <label for="email_login">Email</label>
+                    <input type="email" name="email_login" placeholder="Seu email aqui" id="email_login" required>
+                </section>
+                <section>
+                    <label for="senha_login">Senha</label>
+                    <input type="password" name="senha_login" placeholder="Sua senha aqui" id="senha_login" required>
+                </section>
+                <input type="submit" value="sign in" id="submit">
+                <a href="{{ url_for('signup') }}">Sign up</a>
+                <a href="#">Esqueci a Senha</a>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
+
